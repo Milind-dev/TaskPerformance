@@ -18,16 +18,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(middlewares)
 
-app.get('/', async(req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'home.html'));
-  });
-app.use("/", middlewares,productRouter);
+
+app.use("/task/showdatares", middlewares,productRouter);
 app.use("/task",middlewares,productRouter)
 app.use("/task/addjob",middlewares,productRouter)
 app.use("/task/job/premiumsDatas",middlewares,productRouter)
 // app.use("/task/premium",middlewares,productRouter)
 // app.use("/task/premium",productRouter)
-
+app.get('/', async(req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'home.html'));
+  });
 app.listen(port, () => {
   console.log(`server start port at  ${port}`);
 });
