@@ -19,13 +19,13 @@ app.use(bodyParser.json());
 app.use(middlewares)
 
 
-app.use("/task/showdata/showjob", middlewares,productRouter);
+app.use("/", middlewares,productRouter);
 app.use("/task",middlewares,productRouter)
 app.use("/task/addjob",middlewares,productRouter)
 app.use("/task/job/premiumsDatas",middlewares,productRouter)
 // app.use("/task/premium",middlewares,productRouter)
 // app.use("/task/premium",productRouter)
-app.get('/', async(req, res) => {
+app.get('/public', async(req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'home.html'));
   });
 app.listen(port, () => {
