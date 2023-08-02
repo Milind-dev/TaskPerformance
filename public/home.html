@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home data</title>
+</head>
+<style>
+    div{
+        color: #143d59;
+        background-color: #f4b41a;
+        width: 51em;
+        border-radius: 1vh;
+        font-size: 12px;
+        padding: 1vh;
+    }
+    .urls{
+        color: #143d59;
+    }
+    textarea{
+        height: 39vh;
+        width: 33vh;
+    }
+</style>
+<body>
+    <h1 class="urls"> URLS </h1>
+    <div>
+        <h1> static page home-  http://localhost:3000/home.html</h1>
+        <h1>  http://localhost:3000/ </h1>
+        <h1>  http://localhost:3000/task?types=Active_Jobs    </h1>
+        <h1>  http://localhost:3000/task/Doctor </h1>
+        <h1>  http://localhost:3000/task/job/premiumsDatas?ispre=true </h1>        
+        <h1> PostData -  http://localhost:3000/task/addjob</h1>
+    </div>
+    <div>
+        <p>Post Data use it on postman req body </p>
+        <textarea>
+            {
+                name:     "",
+                location: "",
+                posted:   "",
+                status:   "",
+                applied:  "",
+                jobViews: "",
+                daysLeft: "",
+                premium:  "",
+                dateFormat: ""
+            }
+
+        </textarea>
+    </div>
+    
+</body>
+</html>
