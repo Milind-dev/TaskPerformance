@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(middlewares)
 
 
-app.use("/task/showdatares", middlewares,productRouter);
+app.use("/task/showdata/showjob", middlewares,productRouter);
 app.use("/task",middlewares,productRouter)
 app.use("/task/addjob",middlewares,productRouter)
 app.use("/task/job/premiumsDatas",middlewares,productRouter)

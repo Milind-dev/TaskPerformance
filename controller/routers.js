@@ -4,7 +4,7 @@ const data = require("../data/datas.json");
 
 // Handling request using router
 
-router.get("/task/showdatares", (req, res, next) => {
+router.get("/task/showdata/showjob", (req, res, next) => {
   res.status(200).json({ data, message:"data succesfully loaded" });
 });
 router.post("/task/addjob", (req, res) => {
