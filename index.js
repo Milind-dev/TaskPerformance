@@ -12,7 +12,6 @@ const middlewares = function (req, res, next) {
     next()
 }
 
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -25,7 +24,8 @@ app.use("/task/addjob",middlewares,productRouter)
 app.use("/task/job/premiumsDatas",middlewares,productRouter)
 // app.use("/task/premium",middlewares,productRouter)
 // app.use("/task/premium",productRouter)
-app.get('/public', async(req, res) => {
+
+app.use('/public', async(req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'home.html'));
   });
 app.listen(port, () => {
